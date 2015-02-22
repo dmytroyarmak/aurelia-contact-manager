@@ -12,4 +12,11 @@ export class Contacts {
       this.contacts = contacts;
     });
   }
+
+  deleteContact(contact){
+    this.contactService.delete(contact).then(() => {
+      var index = this.contacts.indexOf(contact);
+      this.contacts.splice(index, 1);
+    });
+  }
 }

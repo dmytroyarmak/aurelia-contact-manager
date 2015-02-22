@@ -28,8 +28,15 @@ export class ContactService {
 
   update(contact){
     var contactUrl = CONTACT_URL.replace('${id}', contact.id);
-    return this.http.put(contactUrl).then(response => {
+    return this.http.put(contactUrl, contact).then(response => {
       return new Contact(response.content);
+    });
+  }
+
+  delete(contact){
+    var contactUrl = CONTACT_URL.replace('${id}', contact.id);
+    return this.http.delete(contactUrl).then(response => {
+      return true;
     });
   }
 }
