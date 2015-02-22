@@ -1,5 +1,8 @@
 <template>
   <h2 class="page-header text-center">List of contacts</h2>
+  <p class="text-center">
+    <a href="#contacts/new" class="btn btn-lg btn-outline add-contact-btn">Add Contact</a>
+  </p>
   <ul class="media-list row">
   	<li class="media col-md-6 col-lg-4" repeat.for="contact of contacts">
        <div class="thumbnail">
@@ -8,7 +11,7 @@
       <div class="media-heading">
         <h3>${contact.name}</h3>
         <small>
-            <a href.bind="contact.getEditUrl()">
+            <a href="#contacts/${contact.id}">
               <i class="glyphicon glyphicon-pencil edit-contract"></i>
             </a>
             <a href="#" click.delegate="$parent.deleteContact(contact)">
