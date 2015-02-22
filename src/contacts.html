@@ -1,0 +1,22 @@
+<template>
+  <h2 class="page-header text-center">List of contacts</h2>
+  <ul class="media-list row">
+  	<li class="media col-md-6 col-lg-4" repeat.for="contact of contacts">
+       <div class="thumbnail">
+        <img class="media-object" src.bind="contact.getThumbnailUrl()">
+      </div>
+      <div class="media-heading">
+        <h3>${contact.name}</h3>
+      </div>
+      <div class="media-body">
+        <dl>
+          <dt>Phone Number:</dt>
+          <dd>${contact.tel}</dd>
+          <dt>Email:</dt>
+          <dd>${contact.email}</dd>
+        </dl>
+      </div>
+      <hr>
+  	</li>
+  </ul>
+</template>

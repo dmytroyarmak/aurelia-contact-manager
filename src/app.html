@@ -1,9 +1,15 @@
 <template>
-  <import from='./nav-bar'></import>
-
-  <nav-bar router.bind="router"></nav-bar>
-
-  <div class="page-host">
-    <router-view></router-view>
-  </div>
+	<header class="bs-header">
+	  <div class="container">
+	    <h1>Contact Manager</h1>
+	    <p>Simple Aurelia example application</p>
+	  </div>
+	</header>
+	<div class="container">
+	  <div class="row">
+	    <div class="col-xs-12">
+	    	<router-view></router-view>
+	    </div>
+	  </div>
+	</div>
 </template>

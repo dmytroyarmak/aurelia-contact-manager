@@ -5,10 +5,9 @@ export class App {
   constructor(router) {
     this.router = router;
     this.router.configure(config => {
-      config.title = 'Aurelia';
+      config.title = 'Contact Manager';
       config.map([
-        { route: ['','welcome'], moduleId: 'welcome', nav: true, title:'Welcome' },
-        { route: 'flickr', moduleId: 'flickr', nav: true }
+        { route: ['','contacts'], moduleId: 'contacts', title: 'Contacts' },
       ]);
     });
   }
