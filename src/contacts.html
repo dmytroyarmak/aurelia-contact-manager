@@ -7,6 +7,9 @@
       </div>
       <div class="media-heading">
         <h3>${contact.name}</h3>
+        <small>
+            <a href.bind="contact.getEditUrl()"><span class="glyphicon glyphicon-pencil edit-contract"></span></a>
+        </small>
       </div>
       <div class="media-body">
         <dl>

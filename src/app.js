@@ -7,7 +7,8 @@ export class App {
     this.router.configure(config => {
       config.title = 'Contact Manager';
       config.map([
-        { route: ['','contacts'], moduleId: 'contacts', title: 'Contacts' },
+        { route: ['', 'contacts'], moduleId: 'contacts' },
+        { route: ['contacts/:id', 'contacts/:id/edit'], moduleId: 'edit-contact'},
       ]);
     });
   }
