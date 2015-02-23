@@ -2,6 +2,10 @@
 
 Implementation of contact manager built with [Aurelia](http://www.aurelia.io/).
 
+## Demo
+
+[http://dmytroyarmak.github.io/aurelia-contact-manager/](http://dmytroyarmak.github.io/aurelia-contact-manager/)
+
 ## Running The App
 
 To run the app, follow these steps.

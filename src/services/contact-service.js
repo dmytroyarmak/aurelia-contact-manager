@@ -9,6 +9,9 @@ export class ContactService {
   static inject() { return [HttpClient]; }
   constructor(http){
     this.http = http;
+    this.http.configure((requestBuilder) => {
+      requestBuilder.withCredentials(true);
+    })
   }
 
   getAll(){
